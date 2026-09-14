@@ -8,6 +8,12 @@ APP_DIR="${YWD_SSH_DIR:-$SRC_ROOT/ywd-ssh}"
 
 say() { printf '\n[YWD-SSH] %s\n' "$*"; }
 
+if ! command -v git >/dev/null 2>&1; then
+    say "git is missing; installing bootstrap prerequisites"
+    sudo apt-get update
+    sudo DEBIAN_FRONTEND=noninteractive apt-get install -y git ca-certificates
+fi
+
 mkdir -p "$SRC_ROOT"
 
 if [[ -d "$APP_DIR/.git" ]]; then
