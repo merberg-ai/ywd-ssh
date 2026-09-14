@@ -51,7 +51,10 @@ kotlin {
 }
 
 dependencies {
-    val composeBom = platform("androidx.compose:compose-bom:2026.08.00")
+    // Keep this aligned with termlib 0.1.0. Newer Compose 1.12 artifacts
+    // require API 37 / AGP 9.1+, which this deliberately conservative
+    // first physical-test toolchain does not need.
+    val composeBom = platform("androidx.compose:compose-bom:2026.05.01")
 
     implementation(composeBom)
     implementation("androidx.activity:activity-compose:1.13.0")
