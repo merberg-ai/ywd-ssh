@@ -1,5 +1,7 @@
 # YWD-SSH
 
+[![Android CI](https://github.com/merberg-ai/ywd-ssh/actions/workflows/android.yml/badge.svg)](https://github.com/merberg-ai/ywd-ssh/actions/workflows/android.yml)
+
 A small, fast Android SSH client with a retro/cyber YWD interface.
 
 The goal is deliberately simple: saved hosts, secure SSH connections, and a good terminal without accounts, subscriptions, telemetry, ads, or cloud dependencies.
